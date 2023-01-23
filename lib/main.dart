@@ -320,7 +320,7 @@ class MapSampleState extends State {
                       print("Can't launch $url");
                     }
                   },
-                  child: const Text('fy'),
+                  child: const Text('プライバシーポリシー'),
                 ),
                 const Divider(
                   color: Colors.black,
