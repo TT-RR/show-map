@@ -248,6 +248,21 @@ class MapSampleState extends State {
                 color: Colors.blue[300],
               ),
             ),
+            ElevatedButton(
+              onPressed: () async{
+                final url = Uri.parse(
+                  'https://nkc-showmap.com/privacy-policy',
+                );
+                if (await canLaunchUrl(url)) {
+                  launchUrl(url);
+                } else {
+                  // ignore: avoid_print
+                  print("Can't launch $url");
+                }
+              },
+              child: const Text('プライバシーポリシー'),
+            ),
+
             for (int i = 0; i < 4; i++)
               ListTile(
                 leading: Image.asset("images/" + (i + 1).toString() + ".png"),
@@ -307,20 +322,6 @@ class MapSampleState extends State {
                     _area(i);
                     notify_flag_duration();
                   },
-                ),
-                ElevatedButton(
-                  onPressed: () async {
-                    final url = Uri.parse(
-                      'https://nkc-showmap.com/privacy-policy',
-                    );
-                    if (await canLaunchUrl(url)) {
-                      launchUrl(url);
-                    } else {
-                      // ignore: avoid_print
-                      print("Can't launch $url");
-                    }
-                  },
-                  child: const Text('プライバシーポリシー'),
                 ),
                 const Divider(
                   color: Colors.black,
