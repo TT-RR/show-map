@@ -37,11 +37,12 @@ dependencies:
   google_maps_flutter: ^2.1.1
   page_transition: ^2.0.4
   http: ^0.13.4
+  url_launcher: ^6.1.8
 flutter_icons:
   android: true
   ios: true
   image_path: "images/app_icon_draft3.png"
-  url_launcher: ^6.1.7
+
 
 dev_dependencies:
   flutter_test:
